@@ -286,3 +286,21 @@ treemap.c:45:7: error: unused variable ‘resultado’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 11f3c2c
+Fri 23 Sep 2022 12:05:45 PM UTC: 
+ treemap.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:48:7: error: unused variable ‘resultado’ [-Werror=unused-variable]
+   48 |   int resultado = newMap->lower_than(key1,key2);
+      |       ^~~~~~~~~
+treemap.c:46:16: error: ‘newMap’ is used uninitialized in this function [-Werror=uninitialized]
+   46 |   newMap->root = NULL;
+      |                ^
+treemap.c:48:19: error: ‘key1’ is used uninitialized in this function [-Werror=uninitialized]
+   48 |   int resultado = newMap->lower_than(key1,key2);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+treemap.c:48:19: error: ‘key2’ is used uninitialized in this function [-Werror=uninitialized]
+cc1: all warnings being treated as errors
+Compilation failed
+4cee8cd
