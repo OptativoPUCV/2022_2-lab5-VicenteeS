@@ -161,3 +161,20 @@ treemap.c:45:22: error: ‘newMap’ is used uninitialized in this function [-We
 cc1: all warnings being treated as errors
 Compilation failed
 eb42d03
+Fri 23 Sep 2022 12:03:22 PM UTC: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:42:3: error: ‘si’ undeclared (first use in this function)
+   42 |   si = (*lower_than) (void* key1, void* key2);
+      |   ^~
+treemap.c:42:3: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:42:23: error: expected expression before ‘void’
+   42 |   si = (*lower_than) (void* key1, void* key2);
+      |                       ^~~~
+treemap.c:42:9: error: too few arguments to function ‘lower_than’
+   42 |   si = (*lower_than) (void* key1, void* key2);
+      |        ~^~~~~~~~~~~~
+Compilation failed
+f2410f5
