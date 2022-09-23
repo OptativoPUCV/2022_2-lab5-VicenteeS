@@ -77,13 +77,13 @@ void insertTreeMap(TreeMap * tree, void* key, void * value){
       //nodo->parent = nActual->parent;
       if(tree->lower_than(nActual->pair->key, key) == 0)
       {
-        nActual = nActual->left;
+        nActual = nodo;
       }
       else
       {
-        nActual = nActual->right;
+        nActual = nodo;
       }
-      nActual = nodo;
+      
       tree->current = nActual;
       
     }
