@@ -373,3 +373,21 @@ treemap.c:48:3: error: ‘key2’ is used uninitialized in this function [-Werro
 cc1: all warnings being treated as errors
 Compilation failed
 757fbbe
+Fri 23 Sep 2022 12:12:26 PM UTC: 
+ treemap.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:56:11: error: ‘newMap’ undeclared (first use in this function)
+   56 |   return (newMap);
+      |           ^~~~~~
+treemap.c:56:11: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:49:7: error: unused variable ‘resultado’ [-Werror=unused-variable]
+   49 |   int resultado = tree->lower_than(key1,key2);
+      |       ^~~~~~~~~
+treemap.c:57:1: error: control reaches end of non-void function [-Werror=return-type]
+   57 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+9042081
