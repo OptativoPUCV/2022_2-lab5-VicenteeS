@@ -229,3 +229,24 @@ treemap.c:49:7: error: unused variable ‘resultado’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 8c605e3
+Fri 23 Sep 2022 12:05:02 PM UTC: 
+ treemap.c | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:45:20: error: ‘map’ undeclared (first use in this function)
+   45 |   int *resultado = map->lower_than(key1,key2);
+      |                    ^~~
+treemap.c:45:20: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:45:36: error: ‘key1’ undeclared (first use in this function)
+   45 |   int *resultado = map->lower_than(key1,key2);
+      |                                    ^~~~
+treemap.c:45:41: error: ‘key2’ undeclared (first use in this function)
+   45 |   int *resultado = map->lower_than(key1,key2);
+      |                                         ^~~~
+treemap.c:45:8: error: unused variable ‘resultado’ [-Werror=unused-variable]
+   45 |   int *resultado = map->lower_than(key1,key2);
+      |        ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8219a9b
