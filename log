@@ -576,3 +576,18 @@ treemap.c:77:7: error: break statement not within loop or switch
       |       ^~~~~
 Compilation failed
 e1e3450
+Fri 23 Sep 2022 11:15:50 PM UTC: 
+ treemap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:66:29: error: ‘nodoActual’ undeclared (first use in this function); did you mean ‘nActual’?
+   66 |         if(tree->lower_than(nodoActual->pair->key, key) == 0)
+      |                             ^~~~~~~~~~
+      |                             nActual
+treemap.c:66:29: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:76:20: error: ‘nodo’ undeclared (first use in this function)
+   76 |       nodoActual = nodo;
+      |                    ^~~~
+Compilation failed
+ed25093

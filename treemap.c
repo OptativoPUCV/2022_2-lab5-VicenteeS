@@ -56,7 +56,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value){
       TreeNode *nodo = createTreeNode(key, value);
       tree->root = nodo;
       tree->current = nodo;
-      break;
+      
     }
     else
     {
@@ -72,9 +72,10 @@ void insertTreeMap(TreeMap * tree, void* key, void * value){
           nodoActual = nodoActual->right;
         }
       }
+      
       nodoActual = nodo;
       tree->current = nodoActual;
-      break;
+      
     }
   }
 }
