@@ -63,18 +63,18 @@ void insertTreeMap(TreeMap * tree, void* key, void * value){
       TreeNode *nActual = tree->root;
       while(nActual != NULL)
       {
-        if(tree->lower_than(nodoActual->pair->key, key) == 0)
+        if(tree->lower_than(nActual->pair->key, key) == 0)
         {
-          nodoActual = nodoActual->left;
+          nActual = nActual->left;
         }
         else
         {
-          nodoActual = nodoActual->right;
+          nActual = nActual->right;
         }
       }
       
-      nodoActual = nodo;
-      tree->current = nodoActual;
+      nActual = nodo;
+      tree->current = nActual;
       
     }
   }
