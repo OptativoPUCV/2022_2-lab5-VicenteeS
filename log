@@ -448,3 +448,15 @@ treemap.c:47:20: error: assignment to ‘int (*)(void *, void *)’ from ‘int�
 cc1: all warnings being treated as errors
 Compilation failed
 b420370
+Fri 23 Sep 2022 12:17:30 PM UTC: 
+ treemap.c | 11 +++++------
+ 1 file changed, 5 insertions(+), 6 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:46:3: error: ‘tree’ undeclared (first use in this function); did you mean ‘free’?
+   46 |   tree->lower_than = lower_than;
+      |   ^~~~
+      |   free
+treemap.c:46:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+3dd1fb2
