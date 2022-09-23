@@ -649,3 +649,14 @@ Fri 23 Sep 2022 11:34:35 PM UTC:
  1 file changed, 2 insertions(+), 1 deletion(-)
  tests:  0|0
 e6ecb26
+Fri 23 Sep 2022 11:36:01 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:60:7: error: ‘n’ undeclared (first use in this function)
+   60 |       n->parent = NULL;
+      |       ^
+treemap.c:60:7: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+5e8f94c
