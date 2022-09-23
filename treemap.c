@@ -91,11 +91,11 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
         tree->current = nodoActual;
         return (nodoActual->pair);
       }
-      if(key < nodoActual->pair->key)
+      if(lower_than(nodoActual->pair->key, key) == 0)
       {
         nodoActual = nodoActual->left;
       }
-      if(key > nodoActual->pair->key)
+      else
       {
         nodoActual = nodoActual->right;
       }
