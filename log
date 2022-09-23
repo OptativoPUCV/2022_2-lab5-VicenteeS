@@ -520,3 +520,9 @@ treemap.c:22:5: note: declared here
       |     ^~~~~~~~
 Compilation failed
 5d58654
+Fri 23 Sep 2022 01:01:27 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|7
+total_score: 5/70
+03b6b5a
