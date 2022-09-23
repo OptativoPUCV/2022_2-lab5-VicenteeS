@@ -660,3 +660,8 @@ treemap.c:60:7: error: ‘n’ undeclared (first use in this function)
 treemap.c:60:7: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 5e8f94c
+Fri 23 Sep 2022 11:36:11 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+f6b50e8
