@@ -2,3 +2,14 @@ Fri 23 Sep 2022 11:39:38 AM UTC:
  tests:  1|8
 total_score: 0/70
 798176d
+Fri 23 Sep 2022 11:52:03 AM UTC: 
+ treemap.c | 14 +++++++++++---
+ 1 file changed, 11 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+test.c: In function ‘createTreeMap’:
+treemap.c:42:16: error: ‘newMap’ is used uninitialized in this function [-Werror=uninitialized]
+   42 |   newMap->root = NULL;
+      |                ^
+cc1: all warnings being treated as errors
+Compilation failed
+ce9eb06
