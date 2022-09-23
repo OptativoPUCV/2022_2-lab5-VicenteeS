@@ -88,7 +88,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
       if(nodoActual->pair->key == key)
       {
         tree->current = nodoActual;
-        return nodoActual;
+        return (nodoActual->pair);
       }
       if(key < nodoActual->pair->key)
       {
