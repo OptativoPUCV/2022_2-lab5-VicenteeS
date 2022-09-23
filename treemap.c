@@ -36,16 +36,17 @@ TreeNode * createTreeNode(void* key, void * value) {
     return new;
 }
 
-TreeMap * createTreeMap(int si = (*lower_than) (void* key1, void* key2)) 
+TreeMap * createTreeMap(int si)//= (*lower_than) (void* key1, void* key2)) 
 {
   TreeMap *newMap;
 
-  void *key1;
-  void *key2;
+  //void *key1;
+  //void *key2;
   
   //(*lower_than) (key1, key2);
   newMap->root = NULL;
   newMap->current = NULL;
+  newMap->lower_than = si;
   /*if(int (*lower_than) (void* key1, void* key2) == 1)
   {
     newMap->root = 
