@@ -150,3 +150,14 @@ treemap.c:47:16: error: ‘newMap’ is used uninitialized in this function [-We
 cc1: all warnings being treated as errors
 Compilation failed
 c5eafa4
+Fri 23 Sep 2022 12:02:10 PM UTC: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+test.c: In function ‘createTreeMap’:
+treemap.c:45:22: error: ‘newMap’ is used uninitialized in this function [-Werror=uninitialized]
+   45 |   newMap->lower_than = NULL;
+      |                      ^
+cc1: all warnings being treated as errors
+Compilation failed
+eb42d03
