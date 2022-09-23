@@ -91,7 +91,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
         tree->current = nodoActual;
         return (nodoActual->pair);
       }
-      if(lower_than(nodoActual->pair->key, key) == 0)
+      if(tree->lower_than(nodoActual->pair->key, key) == 0)
       {
         nodoActual = nodoActual->left;
       }
