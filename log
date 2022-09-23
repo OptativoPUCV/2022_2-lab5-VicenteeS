@@ -57,3 +57,18 @@ treemap.c:42:24: error: ‘key2’ undeclared (first use in this function)
       |                        ^~~~
 Compilation failed
 9a6cb1b
+Fri 23 Sep 2022 11:55:36 AM UTC: 
+ treemap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:4:
+test.c: In function ‘createTreeMap’:
+treemap.c:46:4: error: ‘key1’ is used uninitialized in this function [-Werror=uninitialized]
+   46 |   (*lower_than) (key1, key2);
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~
+treemap.c:46:4: error: ‘key2’ is used uninitialized in this function [-Werror=uninitialized]
+treemap.c:47:16: error: ‘newMap’ is used uninitialized in this function [-Werror=uninitialized]
+   47 |   newMap->root = NULL;
+      |                ^
+cc1: all warnings being treated as errors
+Compilation failed
+6289997
