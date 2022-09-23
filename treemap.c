@@ -43,7 +43,7 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2))
  
   tree->root = NULL;
   tree->current = NULL;
-  int resultado = tree->lower_than();
+  int resultado = tree->lower_than;
   tree->lower_than = resultado;
   /*if(int (*lower_than) (void* key1, void* key2) == 1)
   {
