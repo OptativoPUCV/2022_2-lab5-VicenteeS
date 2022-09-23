@@ -89,3 +89,12 @@ treemap.c:47:16: error: ‘newMap’ is used uninitialized in this function [-We
 cc1: all warnings being treated as errors
 Compilation failed
 0c55abe
+Fri 23 Sep 2022 12:00:30 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c:39:32: error: expected ‘;’, ‘,’ or ‘)’ before ‘=’ token
+   39 | TreeMap * createTreeMap(int si = (*lower_than) (void* key1, void* key2))
+      |                                ^
+Compilation failed
+ecba34f
