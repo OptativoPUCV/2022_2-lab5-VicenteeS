@@ -139,3 +139,14 @@ treemap.c:49:24: error: ‘si’ undeclared (first use in this function)
 treemap.c:49:24: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 bd6e67e
+Fri 23 Sep 2022 12:01:54 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+test.c: In function ‘createTreeMap’:
+treemap.c:47:16: error: ‘newMap’ is used uninitialized in this function [-Werror=uninitialized]
+   47 |   newMap->root = NULL;
+      |                ^
+cc1: all warnings being treated as errors
+Compilation failed
+c5eafa4
