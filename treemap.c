@@ -154,7 +154,7 @@ void removeNode(TreeMap * tree, TreeNode* node)
 
       nodoMinimum->parent->left = nodoMinimum->right;
       
-      removeNode(tree, nodoMinimum);
+      free(nodoMinimum);
 
       
     }
