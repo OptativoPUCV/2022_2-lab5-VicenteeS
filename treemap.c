@@ -205,16 +205,22 @@ Pair * upperBound(TreeMap * tree, void* key) {
     return NULL;
 }
 
-Pair * firstTreeMap(TreeMap * tree) {
+Pair * firstTreeMap(TreeMap * tree) 
+{
   TreeNode *nodo = tree->root;
   while(nodo->left != NULL)
   {
     nodo = nodo->left;
   }
-  
   return (nodo->pair);
 }
 
-Pair * nextTreeMap(TreeMap * tree) {
-    return NULL;
+Pair * nextTreeMap(TreeMap * tree) 
+{
+  TreeNode *nodoActual = tree->current;
+  if(nodoActual->right != NULL)
+  {
+    return(nodoActual->right->pair);
+  }
+  return (nodoAcutal->parent->pair);
 }
