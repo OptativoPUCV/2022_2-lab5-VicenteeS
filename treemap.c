@@ -222,5 +222,5 @@ Pair * nextTreeMap(TreeMap * tree)
   {
     return(nodoActual->right->pair);
   }
-  return (nodoAcutal->parent->pair);
+  return (nodoActual->parent->pair);
 }
