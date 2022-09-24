@@ -155,8 +155,6 @@ void removeNode(TreeMap * tree, TreeNode* node)
       nodoMinimum->parent->left = nodoMinimum->right;
       
       free(nodoMinimum);
-
-      
     }
   }
 }
@@ -232,6 +230,10 @@ Pair * nextTreeMap(TreeMap * tree)
   if(nodoActual->right != NULL)
   {
     return(nodoActual->right->pair);
+  }
+  if(nodoActual == tree->root)
+  {
+    return(nodoActual->right);
   }
   return (nodoActual->parent->pair);
 }
