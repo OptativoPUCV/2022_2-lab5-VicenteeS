@@ -150,8 +150,7 @@ void removeNode(TreeMap * tree, TreeNode* node)
       
       TreeNode* nodoMinimum = minimum(node);
       
-      node->pair->key = nodoMinimum->pair->key;
-      node->pair->value = nodoMinimum->pair->value;
+      node->pair = nodoMinimum->pair;
 
       nodoMinimum->parent->left = nodoMinimum->right;
       
