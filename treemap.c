@@ -206,7 +206,13 @@ Pair * upperBound(TreeMap * tree, void* key) {
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
-    return NULL;
+  nodo = tree->root;
+  while(nodo->left != NULL)
+  {
+    nodo = nodo->left;
+  }
+  
+  return (nodo->pair);
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
