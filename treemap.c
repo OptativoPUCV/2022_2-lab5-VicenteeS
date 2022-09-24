@@ -233,7 +233,7 @@ Pair * nextTreeMap(TreeMap * tree)
   }
   if(nodoActual == tree->root)
   {
-    return(nodoActual->right);
+    return(nodoActual->right->pair);
   }
   return (nodoActual->parent->pair);
 }
