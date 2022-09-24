@@ -227,13 +227,11 @@ Pair * firstTreeMap(TreeMap * tree)
 Pair * nextTreeMap(TreeMap * tree) 
 {
   TreeNode *nodoActual = tree->current;
-  if(nodoActual->right != NULL)
+  if(nodoActual->right == NULL)
   {
-    return(nodoActual->right->pair);
+    return (nodoActual->parent->pair);
   }
-  if(nodoActual == tree->root)
-  {
-    return(nodoActual->right->pair);
-  }
-  return (nodoActual->parent->pair);
+  return(nodoActual->right->pair);
+  
+  
 }
