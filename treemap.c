@@ -154,6 +154,8 @@ void removeNode(TreeMap * tree, TreeNode* node)
       node->pair->value = nodoMinimum->pair->value;
       
       removeNode(tree, nodoMinimum);
+
+      
     }
   }
 }
@@ -201,8 +203,16 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
 }
 
 
-Pair * upperBound(TreeMap * tree, void* key) {
-    return NULL;
+Pair * upperBound(TreeMap * tree, void* key) 
+{/*
+  TreeNode* nodeUB = tree->root;
+
+  while(nodeUB != NULL)
+  {
+    
+  }
+  
+  return NULL;*/
 }
 
 Pair * firstTreeMap(TreeMap * tree) 
