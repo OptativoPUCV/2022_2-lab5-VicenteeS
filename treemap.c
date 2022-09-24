@@ -210,9 +210,9 @@ Pair * upperBound(TreeMap * tree, void* key)
   while(nodeUB != NULL)
   {
     
-  }
+  }*/
   
-  return NULL;*/
+  return NULL;
 }
 
 Pair * firstTreeMap(TreeMap * tree) 
