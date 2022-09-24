@@ -206,7 +206,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
-  nodo = tree->root;
+  TreeNode *nodo = tree->root;
   while(nodo->left != NULL)
   {
     nodo = nodo->left;
