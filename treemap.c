@@ -220,7 +220,7 @@ Pair * nextTreeMap(TreeMap * tree)
   TreeNode *nodoActual = tree->current;
   if(nodoActual->right != NULL)
   {
-    return(tree->current->right->pair);
+    return(nodoActual->right->pair);
   }
-  return (tree->current->parent->pair);
+  return (nodoActual->parent->pair);
 }
