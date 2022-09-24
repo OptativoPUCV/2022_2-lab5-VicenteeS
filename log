@@ -831,3 +831,15 @@ Sat 24 Sep 2022 05:50:24 PM UTC:
  tests:  20|3
 total_score: 45/70
 5c8a00f
+Sat 24 Sep 2022 06:04:05 PM UTC: 
+ treemap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:156:7: error: ‘nodeMinimum’ undeclared (first use in this function); did you mean ‘nodoMinimum’?
+  156 |       nodeMinimum->parent->left = nodeMinimum->right;
+      |       ^~~~~~~~~~~
+      |       nodoMinimum
+treemap.c:156:7: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+6012a9d
