@@ -945,3 +945,9 @@ treemap.c:233:21: error: ‘nodoAcutal’ undeclared (first use in this function
 treemap.c:233:21: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 6664f5e
+Sun 25 Sep 2022 07:56:36 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  23|2
+total_score: 50/70
+fc7262b
