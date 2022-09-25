@@ -255,7 +255,7 @@ Pair * nextTreeMap(TreeMap * tree)
       {
         if(aux->parent->left == aux)
         {
-          if(aux->pair->key > clave)
+          if(tree->lower_than(aux->pair->key , clave) == 0)
           {
             return(nodoActual->parent->pair);
           }
