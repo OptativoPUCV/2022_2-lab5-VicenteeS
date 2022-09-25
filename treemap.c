@@ -260,7 +260,7 @@ Pair * nextTreeMap(TreeMap * tree)
       }
       if(aux == nodoActual)
       {
-        tree->current = nodoActual->right;
+        //tree->current = nodoActual->right;
         return NULL;
       }
 
@@ -270,8 +270,8 @@ Pair * nextTreeMap(TreeMap * tree)
         {
           if(tree->lower_than(nodoActual->pair->key , clave) == 1)
           {
-            tree->current = nodoActual;
-            return(nodoActual->pair);
+            tree->current = nodoActual->parent;
+            return(nodoActual->parent->pair);
           }
         }
        
