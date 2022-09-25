@@ -216,7 +216,7 @@ Pair * upperBound(TreeMap * tree, void* key)
 
 Pair * firstTreeMap(TreeMap * tree) 
 {
-  TreeNode *nodo = tree->root;
+  TreeNode nodo = tree->root;
   while(nodo->left != NULL)
   {
     nodo = nodo->left;
@@ -249,14 +249,18 @@ Pair * nextTreeMap(TreeMap * tree)
     }
     else
     {
+      aux = nodoActual;
       do
       {
-        if(nodoActual->parent->left == nodoActual)
+        if(aux->parent->left == aux)
         {
-          return(nodoActual->parent->pair);
+          if(aux->pair->key > nodoActual->pair->key)
+          {
+            return(nodoActual->parent->pair);
+          }
         }
-        
-        nodoActual = nodoActual->parent;
+       
+        aux = aux->parent;
         
       }while(nodoActual != tree->root);
       return NULL;
