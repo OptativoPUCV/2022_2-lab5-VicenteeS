@@ -228,6 +228,7 @@ Pair * nextTreeMap(TreeMap * tree)
 {
   TreeNode *nodoActual = tree->current;
   TreeNode *aux;
+  char clave[30] = nodoActual->pair->key;
   
   if(nodoActual->right != NULL)
   {
@@ -254,7 +255,7 @@ Pair * nextTreeMap(TreeMap * tree)
       {
         if(aux->parent->left == aux)
         {
-          if(aux->pair->key > nodoActual->pair->key)
+          if(aux->pair->key > clave)
           {
             return(nodoActual->parent->pair);
           }
