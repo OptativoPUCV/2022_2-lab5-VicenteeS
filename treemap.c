@@ -227,7 +227,7 @@ Pair * firstTreeMap(TreeMap * tree)
 Pair * nextTreeMap(TreeMap * tree) 
 {
   TreeNode *nodoActual = tree->current;
-  TreeNode *aux;
+  //TreeNode *aux;
   
   if(nodoActual->right != NULL)
   {
@@ -253,7 +253,7 @@ Pair * nextTreeMap(TreeMap * tree)
       {
         if(nodoActual->parent->left == nodoActual)
         {
-          return(nodoActual->parent->pair)
+          return(nodoActual->parent->pair);
         }
         
         nodoActual = nodoActual->parent;
