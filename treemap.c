@@ -203,14 +203,20 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
 
 
 Pair * upperBound(TreeMap * tree, void* key) 
-{/*
-  TreeNode* nodeUB = tree->root;
-
-  while(nodeUB != NULL)
-  {
-    
-  }*/
+{
+  TreeNode *nodoUB = searchTreeMap(tree, key);
+  Pair *nSig;
   
+  if(nodoUB != NULL)
+  {
+    return(nodoUB->pair);
+  }
+  else
+  {
+    tree->current = nodoUB;
+    nSig = nextTreeMap(tree);
+    return(nSig);
+  }
   return NULL;
 }
 
@@ -231,8 +237,6 @@ Pair * nextTreeMap(TreeMap * tree)
   char clave[30];
   strcpy(clave, nodoActual->pair->key);
 
-  
-  
   if(nodoActual->right != NULL)
   {
     nodoActual = nodoActual->right;
@@ -274,13 +278,10 @@ Pair * nextTreeMap(TreeMap * tree)
             return(nodoActual->parent->pair);
           }
         }
-       
         nodoActual = nodoActual->parent;
         
       }while(nodoActual != tree->root);
-      
     }
   }
   return(NULL);
-  
 }
