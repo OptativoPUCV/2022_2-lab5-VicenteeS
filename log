@@ -933,3 +933,15 @@ Sun 25 Sep 2022 07:53:24 PM UTC:
  tests:  22|2
 total_score: 50/70
 3f9ee9c
+Sun 25 Sep 2022 07:56:24 PM UTC: 
+ treemap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:233:21: error: ‘nodoAcutal’ undeclared (first use in this function); did you mean ‘nodoActual’?
+  233 |     tree->current = nodoAcutal->parent;
+      |                     ^~~~~~~~~~
+      |                     nodoActual
+treemap.c:233:21: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+6664f5e
