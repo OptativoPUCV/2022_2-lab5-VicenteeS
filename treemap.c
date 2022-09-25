@@ -204,17 +204,17 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
 
 Pair * upperBound(TreeMap * tree, void* key) 
 {
-  Pair *nodoUB = searchTreeMap(tree, key);
+  Pair *parUB = searchTreeMap(tree, key);
   
-  if(nodoUB != NULL)
+  if(parUB != NULL)
   {
-    return(nodoUB);
+    return(parUB);
   }
   else
   {
-    nodoUB = nextTreeMap(tree);
+    parUB = nextTreeMap(tree);
   }
-  return (nodoUB);
+  return (parUB);
 }
 
 Pair * firstTreeMap(TreeMap * tree) 
