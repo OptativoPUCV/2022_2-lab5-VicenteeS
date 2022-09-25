@@ -1084,3 +1084,9 @@ treemap.c:231:20: error: invalid initializer
       |                    ^~~~~~~~~~
 Compilation failed
 4b6810f
+Sun 25 Sep 2022 08:24:21 PM UTC: 
+ treemap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+ tests:  23|2
+total_score: 50/70
+3374df4

@@ -228,7 +228,8 @@ Pair * nextTreeMap(TreeMap * tree)
 {
   TreeNode *nodoActual = tree->current;
   TreeNode *aux;
-  char clave[30] = nodoActual->pair->key;
+  char clave[30];
+  strcpy(clave, nodoActual->pair->key);
   
   if(nodoActual->right != NULL)
   {
