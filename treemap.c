@@ -253,7 +253,7 @@ Pair * nextTreeMap(TreeMap * tree)
     {
       do
       {
-        if(aux->parent->left == aux)
+        if(nodoActual->parent->left == nodoActual)
         {
           if(tree->lower_than(nodoActual->pair->key , clave) == 1)
           {
