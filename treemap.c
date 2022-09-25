@@ -273,8 +273,6 @@ Pair * nextTreeMap(TreeMap * tree)
           
         }while(nodoActual != tree->root);
       }
-      
-      return NULL;
     }
   }
   return(NULL);
