@@ -231,7 +231,12 @@ Pair * nextTreeMap(TreeMap * tree)
   {
     return (nodoActual->parent->pair);
   }
+  else
+  {
+    if(nodoActual == tree->root)
+    {
+      return(nodoActual->left->pair);
+    }
+  }
   return(nodoActual->right->pair);
-  
-  
 }
