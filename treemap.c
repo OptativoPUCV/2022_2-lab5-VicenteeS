@@ -245,7 +245,7 @@ Pair * nextTreeMap(TreeMap * tree)
   {
     if(nodoActual == nodoActual->parent->left)
     {
-      return(nodoActual->parent);
+      return(nodoActual->parent->pair);
     }
     else
     {
