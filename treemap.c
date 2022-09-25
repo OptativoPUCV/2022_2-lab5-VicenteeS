@@ -265,7 +265,7 @@ Pair * nextTreeMap(TreeMap * tree)
        
         nodoActual = nodoActual->parent;
         
-      }while(nodoActual->parent != tree->root);
+      }while(nodoActual != tree->root);
       return NULL;
     }
   }
