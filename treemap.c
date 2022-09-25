@@ -249,7 +249,7 @@ Pair * nextTreeMap(TreeMap * tree)
   {
     if(nodoActual == nodoActual->parent->left)
     {
-      //tree->current = nodoActual->parent;
+      tree->current = nodoActual->parent;
       return(nodoActual->parent->pair);
     }
     else
