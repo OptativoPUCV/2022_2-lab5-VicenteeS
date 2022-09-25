@@ -230,9 +230,14 @@ Pair * nextTreeMap(TreeMap * tree)
   
   if(nodoActual->right == NULL)
   {
+    if(tree->current == tree->root)
+    {
+      return(NULL);
+    }
     tree->current = nodoActual->parent;
     return (nodoActual->parent->pair);
   }
+  
 
   nodoActual = nodoActual->right;
   
