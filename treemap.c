@@ -227,15 +227,17 @@ Pair * firstTreeMap(TreeMap * tree)
 Pair * nextTreeMap(TreeMap * tree) 
 {
   TreeNode *nodoActual = tree->current;
+  
   if(nodoActual->right == NULL)
   {
     return (nodoActual->parent->pair);
-    if(nodoActual == tree->root)
-    {
-      return(NULL);
-      
-    }
   }
+
+  nodoActual = nodoActual->right;
   
-  return(nodoActual->right->pair);
+  while(nodoActual->left != NULL)
+  {
+    nodoActual = nodoActual->left;
+  }
+  return(nodoActual->pair);
 }
