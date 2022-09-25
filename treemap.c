@@ -231,15 +231,7 @@ Pair * nextTreeMap(TreeMap * tree)
   char clave[30];
   strcpy(clave, nodoActual->pair->key);
 
-  while(aux->right == NULL)
-  {
-    aux = aux->right;
-  }
-  if(aux == nodoActual)
-  {
-    //tree->current = nodoActual->right;
-    return NULL;
-  }
+  
   
   if(nodoActual->right != NULL)
   {
@@ -262,7 +254,15 @@ Pair * nextTreeMap(TreeMap * tree)
     }
     else
     {
-      
+      while(aux->right == NULL)
+      {
+        aux = aux->right;
+      }
+      if(aux == nodoActual)
+      {
+        //tree->current = nodoActual->right;
+        return NULL;
+      }
       if(aux != nodoActual)
       {
         do
