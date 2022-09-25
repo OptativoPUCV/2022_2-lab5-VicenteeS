@@ -263,23 +263,22 @@ Pair * nextTreeMap(TreeMap * tree)
         //tree->current = nodoActual->right;
         return NULL;
       }
-      if(aux != nodoActual)
+      
+      do
       {
-        do
+        if(nodoActual->parent->left == nodoActual)
         {
-          if(nodoActual->parent->left == nodoActual)
+          if(tree->lower_than(nodoActual->pair->key , clave) == 0)
           {
-            if(tree->lower_than(nodoActual->pair->key , clave) == 0)
-            {
-              tree->current = nodoActual->parent;
-              return(nodoActual->parent->pair);
-            }
+            tree->current = nodoActual->parent;
+            return(nodoActual->parent->pair);
           }
-         
-          nodoActual = nodoActual->parent;
-          
-        }while(nodoActual != tree->root);
-      }
+        }
+       
+        nodoActual = nodoActual->parent;
+        
+      }while(nodoActual != tree->root);
+      
     }
   }
   return(NULL);
