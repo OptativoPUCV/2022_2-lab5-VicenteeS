@@ -957,3 +957,23 @@ Sun 25 Sep 2022 07:58:52 PM UTC:
  tests:  23|2
 total_score: 50/70
 cba1ab9
+Sun 25 Sep 2022 08:10:10 PM UTC: 
+ treemap.c | 35 +++++++++++++++++++++++++----------
+ 1 file changed, 25 insertions(+), 10 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:248:24: error: returning ‘TreeNode *’ from a function with incompatible return type ‘Pair *’ [-Werror=incompatible-pointer-types]
+  248 |       return(nodoActual->parent);
+      |             ~~~~~~~~~~~^~~~~~~~~
+treemap.c:256:43: error: expected ‘;’ before ‘}’ token
+  256 |           return(nodoActual->parent->pair)
+      |                                           ^
+      |                                           ;
+  257 |         }
+      |         ~                                  
+treemap.c:230:13: error: unused variable ‘aux’ [-Werror=unused-variable]
+  230 |   TreeNode *aux;
+      |             ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+71eeaa4
