@@ -227,7 +227,7 @@ Pair * firstTreeMap(TreeMap * tree)
 Pair * nextTreeMap(TreeMap * tree) 
 {
   TreeNode *nodoActual = tree->current;
-  TreeNode aux;
+  TreeNode *aux;
   
   if(nodoActual->right != NULL)
   {
