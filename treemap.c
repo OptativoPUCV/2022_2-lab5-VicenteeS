@@ -212,7 +212,7 @@ Pair * upperBound(TreeMap * tree, void* key)
   }
   else
   {
-    parUB = nextTreeMap(tree);
+    //parUB = nextTreeMap(tree);
   }
   return (parUB);
 }
