@@ -237,7 +237,7 @@ Pair * nextTreeMap(TreeMap * tree)
   }
   if(aux == nodoActual)
   {
-    tree->current = nodoActual->right;
+    //tree->current = nodoActual->right;
     return NULL;
   }
   
