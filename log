@@ -1308,3 +1308,8 @@ treemap.c:230:59: error: ‘Pair’ has no member named ‘right’
       |                                                           ^~
 Compilation failed
 effb2d5
+Mon 26 Sep 2022 12:14:17 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+30d671c
