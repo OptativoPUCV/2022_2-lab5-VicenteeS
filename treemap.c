@@ -233,7 +233,7 @@ Pair * upperBound(TreeMap * tree, void* key)
       }
       else
       {
-        return(NULL);
+        return(tree->current->parent->pair);
       }
       //TreeNode *nodo = createTreeNode(key, value);
       //nodo->parent = tree->current;
