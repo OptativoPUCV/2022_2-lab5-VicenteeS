@@ -204,6 +204,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
 
 Pair * upperBound(TreeMap * tree, void* key) 
 {
+  TreeNode *nodoAUX = tree->root;
   Pair *parUB = searchTreeMap(tree, key);
   
   if(parUB != NULL)
@@ -212,7 +213,19 @@ Pair * upperBound(TreeMap * tree, void* key)
   }
   else
   {
-    //parUB = nextTreeMap(tree);
+    while(nodoAUX != NULL)
+    {         
+      tree->current = nodoAUX;
+      if(tree->lower_than(nodoAUX->pair->key, key) == 0)
+      {
+        nodoAUX = nodoAUX->left;
+      }
+      else
+      {
+        nodoAUX = nodoAUX->right;
+      }
+    }
+    parUB = nextTreeMap(tree);
   }
   return (parUB);
 }
