@@ -227,10 +227,11 @@ Pair * upperBound(TreeMap * tree, void* key)
         {
           nodoAUX = nodoAUX->right;
         }
-        if((nodoAUX->pair != NULL) && (nodoAUX->pair != NULL))
+        /*if((nodoAUX->pair != NULL) && (nodoAUX->pair != NULL))
         {
           tree->current = nodoAUX;
-        }
+        }*/
+        tree->current = nodoAUX;
       }
       
       parUB = nextTreeMap(tree);
