@@ -1340,3 +1340,17 @@ Mon 26 Sep 2022 12:49:42 AM UTC:
  tests:  26|1
 total_score: 60/70
 052aace
+Mon 26 Sep 2022 02:13:06 AM UTC: 
+ treemap.c | 12 +++++-------
+ 1 file changed, 5 insertions(+), 7 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:233:13: error: returning ‘TreeNode *’ from a function with incompatible return type ‘Pair *’ [-Werror=incompatible-pointer-types]
+  233 |       return(nodoAUX);
+      |             ^
+treemap.c:207:13: error: unused variable ‘nodoAUX’ [-Werror=unused-variable]
+  207 |   TreeNode *nodoAUX = tree->root;
+      |             ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c1cda06

@@ -215,25 +215,22 @@ Pair * upperBound(TreeMap * tree, void* key)
   {
     if(tree->root != NULL)
     {
+      TreeNode *nodoAUX = tree->root;
       while(nodoAUX != NULL)
-      {  
-        
+      {         
+        tree->current = nodoAUX;
         if(tree->lower_than(nodoAUX->pair->key, key) == 0)
         {
           nodoAUX = nodoAUX->left;
-          
         }
         else
         {
           nodoAUX = nodoAUX->right;
         }
-        /*if((nodoAUX->pair != NULL) && (nodoAUX->pair != NULL))
-        {
-          tree->current = nodoAUX;
-        }*/
-        
       }
-      
+      //TreeNode *nodo = createTreeNode(key, value);
+      //nodo->parent = tree->current;
+      return(nodoAUX);
       parUB = nextTreeMap(tree);
     }
     
