@@ -229,7 +229,7 @@ Pair * upperBound(TreeMap * tree, void* key)
       }
       //TreeNode *nodo = createTreeNode(key, value);
       //nodo->parent = tree->current;
-      return (nodoAUX->pair);
+      return (tree->current->pair);
       //parUB = nextTreeMap(tree);
     }
   }
