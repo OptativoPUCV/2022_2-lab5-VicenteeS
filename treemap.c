@@ -19,6 +19,8 @@ struct TreeMap {
     int (*lower_than) (void* key1, void* key2);
 };
 
+
+
 int is_equal(TreeMap* tree, void* key1, void* key2){
     if(tree->lower_than(key1,key2)==0 &&  
         tree->lower_than(key2,key1)==0) return 1;
@@ -46,6 +48,8 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2))
   
   return (newMap);
 }
+
+
 
 
 void insertTreeMap(TreeMap * tree, void* key, void * value){
@@ -90,6 +94,8 @@ void insertTreeMap(TreeMap * tree, void* key, void * value){
   }
 }
 
+
+
 TreeNode * minimum(TreeNode * x)
 {
   while(x->left != NULL)
@@ -98,6 +104,7 @@ TreeNode * minimum(TreeNode * x)
   }
   return (x);
 }
+
 
 
 void removeNode(TreeMap * tree, TreeNode* node)
@@ -159,6 +166,9 @@ void removeNode(TreeMap * tree, TreeNode* node)
   }
 }
 
+
+
+
 void eraseTreeMap(TreeMap * tree, void* key){
     if (tree == NULL || tree->root == NULL) return;
 
@@ -202,6 +212,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
 }
 
 
+
 Pair * upperBound(TreeMap * tree, void* key) 
 {
   TreeNode *nodoAUX = tree->root;
@@ -239,14 +250,12 @@ Pair * upperBound(TreeMap * tree, void* key)
         }
         return(NULL);
       }
-      //TreeNode *nodo = createTreeNode(key, value);
-      //nodo->parent = tree->current;
-      
-      //parUB = nextTreeMap(tree);
     }
   }
   return (NULL);
 }
+
+
 
 Pair * firstTreeMap(TreeMap * tree) 
 {
@@ -257,6 +266,8 @@ Pair * firstTreeMap(TreeMap * tree)
   }
   return (nodo->pair);
 }
+
+
 
 Pair * nextTreeMap(TreeMap * tree) 
 {
@@ -292,7 +303,6 @@ Pair * nextTreeMap(TreeMap * tree)
       }
       if(aux == nodoActual)
       {
-        //tree->current = nodoActual->right;
         return NULL;
       }
 
