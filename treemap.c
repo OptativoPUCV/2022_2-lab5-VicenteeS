@@ -233,7 +233,11 @@ Pair * upperBound(TreeMap * tree, void* key)
       }
       else
       {
-        return(tree->current->parent->pair);
+        if(tree->lower_than(tree->current->parent->pair->key, key) == 0)
+        {
+          return(tree->current->parent->pair);
+        }
+        return(NULL);
       }
       //TreeNode *nodo = createTreeNode(key, value);
       //nodo->parent = tree->current;
