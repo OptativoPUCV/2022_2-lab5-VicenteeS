@@ -233,7 +233,7 @@ Pair * upperBound(TreeMap * tree, void* key)
       //parUB = nextTreeMap(tree);
     }
   }
-  return (tree->current->pair);
+  return (NULL);
 }
 
 Pair * firstTreeMap(TreeMap * tree) 
