@@ -213,19 +213,23 @@ Pair * upperBound(TreeMap * tree, void* key)
   }
   else
   {
-    while(nodoAUX != NULL)
-    {         
-      if(tree->lower_than(nodoAUX->pair->key, key) == 0)
-      {
-        nodoAUX = nodoAUX->left;
+    if(tree->root != NULL)
+    {
+      while(nodoAUX != NULL)
+      {         
+        if(tree->lower_than(nodoAUX->pair->key, key) == 0)
+        {
+          nodoAUX = nodoAUX->left;
+        }
+        else
+        {
+          nodoAUX = nodoAUX->right;
+        }
       }
-      else
-      {
-        nodoAUX = nodoAUX->right;
-      }
+      tree->current = nodoAUX->parent;
+      parUB = nextTreeMap(tree);
     }
-    tree->current = nodoAUX->parent;
-    parUB = nextTreeMap(tree);
+    
   }
   return (parUB);
 }
