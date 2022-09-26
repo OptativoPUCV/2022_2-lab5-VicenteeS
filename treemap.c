@@ -215,7 +215,6 @@ Pair * upperBound(TreeMap * tree, void* key)
   {
     if(tree->root != NULL)
     {
-      TreeNode *nodoAUX = tree->root;
       while(nodoAUX != NULL)
       {         
         tree->current = nodoAUX;
@@ -233,7 +232,6 @@ Pair * upperBound(TreeMap * tree, void* key)
       return (nodoAUX);
       //parUB = nextTreeMap(tree);
     }
-    
   }
   return (nodoAUX);
 }
