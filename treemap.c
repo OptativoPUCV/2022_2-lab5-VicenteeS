@@ -227,9 +227,17 @@ Pair * upperBound(TreeMap * tree, void* key)
           nodoAUX = nodoAUX->right;
         }
       }
+      if(tree->lower_than(tree->current->pair->key, key) == 1)
+      {
+        return(tree->current->pair)
+      }
+      else
+      {
+        return(NULL);
+      }
       //TreeNode *nodo = createTreeNode(key, value);
       //nodo->parent = tree->current;
-      return (tree->current->pair);
+      
       //parUB = nextTreeMap(tree);
     }
   }
