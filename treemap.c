@@ -229,11 +229,11 @@ Pair * upperBound(TreeMap * tree, void* key)
       }
       //TreeNode *nodo = createTreeNode(key, value);
       //nodo->parent = tree->current;
-      return (nodoAUX);
+      return (nodoAUX->pair);
       //parUB = nextTreeMap(tree);
     }
   }
-  return (nodoAUX);
+  return (parUB);
 }
 
 Pair * firstTreeMap(TreeMap * tree) 
