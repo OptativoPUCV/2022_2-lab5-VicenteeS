@@ -1295,3 +1295,16 @@ Mon 26 Sep 2022 12:10:23 AM UTC:
  1 file changed, 4 insertions(+)
  tests:  0|0
 87118dd
+Mon 26 Sep 2022 12:13:39 AM UTC: 
+ treemap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:230:26: error: ‘Pair’ has no member named ‘left’
+  230 |         if((nodoAUX->pair->left != NULL) && (nodoAUX->pair->right != NULL))
+      |                          ^~
+treemap.c:230:59: error: ‘Pair’ has no member named ‘right’
+  230 |         if((nodoAUX->pair->left != NULL) && (nodoAUX->pair->right != NULL))
+      |                                                           ^~
+Compilation failed
+effb2d5
