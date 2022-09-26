@@ -227,7 +227,7 @@ Pair * upperBound(TreeMap * tree, void* key)
           nodoAUX = nodoAUX->right;
         }
       }
-      if(tree->lower_than(tree->current->pair->key, key) == 1)
+      if(tree->lower_than(tree->current->pair->key, key) == 0)
       {
         return(tree->current->pair);
       }
